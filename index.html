@@ -231,32 +231,34 @@
     }
 </script>
 <script>
-    var sidemenu = document.getElementById("sidemenu");
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwIsLhrJUUhay3R4bP9cg0m9oHypYLPsR0NzAE6BGQt3bqiNqh2r7sJQPh0xHRdcMp7/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+    let timeoutId; // store timeout ID
 
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwIsLhrJUUhay3R4bP9cg0m9oHypYLPsR0NzAE6BGQt3bqiNqh2r7sJQPh0xHRdcMp7/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                msg.innerHTML = "Message sent successfully";
+                clearTimeout(timeoutId); // clear existing timeout
+                timeoutId = setTimeout(function(){
+                    msg.innerHTML = "";
+                }, 5000);
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                msg.innerHTML = "Error occurred. Please try again later.";
+                clearTimeout(timeoutId); // clear existing timeout in case of error
+                timeoutId = setTimeout(function(){
+                    msg.innerHTML = "";
+                }, 5000);
+            });
+    });
+</script>
 </body>
 </html>
