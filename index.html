@@ -23,7 +23,7 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Data Analyst</p>
+            <p>TA - Data Science Team</p>
             <h1>Hi, I'm <span>MAKESH</span><br> from Udumalpet</h1>
         </div>
     </div>
@@ -49,11 +49,11 @@
                       </div>
                       <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Programming Languages: </span>Python, R, JAVA</li>
+                            <li><span>Programming Languages: </span>Python, R, JAVA, HTML, CSS</li>
                             <li><span>Machine Learning Libraries: </span>TensorFlow, PyTorch, Scikit-learn</li>
-                            <li><span>Data Analysis: </span>Pandas, NumPy, SciPy</li>
+                            <li><span>Data Analysis: </span>Pandas, NumPy, SciPy, Web Scraping</li>
                             <li><span>Data Visualization: </span>Tableau, Power BI, Matplotlib, Seaborn, Pyplot</li>
-                            <li><span>Database Management: </span>SQL, Excel</li>
+                            <li><span>Database Management: </span>MySQL, Excel, MongoDB</li>
                             <li><span>Web Frameworks: </span>Flask, Django</li>
                             <li><span>Version Control: </span>Git Hub</li>
                             <li><span>Tools: </span>Jupyter, VS Code, PyCharm, KNIME</li>
@@ -127,9 +127,9 @@
             </div>
             <div>
                 
-                <h2>Natural Language Processing</h2>
-                <p>NLP enables computers to effectively process large amounts of natural, human language. Whether through voice or text data, 
-                    NLP specialists can help your company employ language data for processing and sentiment analysis.</p>
+                <h2>Web Scraping</h2>
+                <p>Web scraping is the process of using bots or web crawlers to automatically extract data from a website. 
+                    It's also known as content scraping, data scraping, or web data scraping. Web scraping removes content and extracts its underlying HTML code and data so that others can replicate the website's content.</p>
                 
             </div>
         </div>
@@ -188,7 +188,7 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><i class="fa-solid fa-paper-plane"></i></a> makeshudt97@gmail.com</p>
+                <p><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCDlgwwvbcLdsQcfrZjXQwqGkFkGnCqpVnQpllHfdBFSDxVgJkHdtLQTQzwzhBWztpRHRg"><i class="fa-solid fa-paper-plane"></i></a> makeshudt97@gmail.com</p>
                 <p><a href=”tel:8508573229″><i class="fa-solid fa-phone"></a></i> +91 8508573229</p>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/makesh-karuppasamy?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjQ8gpaf5QzOWek79ouO4Iw%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
@@ -197,7 +197,7 @@
                     <a href="https://www.coursera.org/user/65bf0c0decd955399828dcc49bdd171f"><i class="fa-brands fa-discourse"></i></a>
 
                 </div>
-                <a href="Makesh_K.pdf" download class="btn btn2">Download CV</a>
+                <a href="Makesh_K_Resume.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -231,6 +231,16 @@
     }
 </script>
 <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwIsLhrJUUhay3R4bP9cg0m9oHypYLPsR0NzAE6BGQt3bqiNqh2r7sJQPh0xHRdcMp7/exec';
     const form = document.forms['submit-to-google-sheet'];
     const msg = document.getElementById("msg");
@@ -260,5 +270,6 @@
             });
     });
 </script>
+
 </body>
 </html>
