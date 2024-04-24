@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(bk1.jpg);
+    background-image: url(bgimg.png);
     background-size: cover;
     background-position: center;
 }
@@ -29,7 +29,7 @@ nav{
 }
 .logo{
     width: 120px;
-
+    
 }
 nav ul li{
     display: inline-block;
@@ -37,7 +37,7 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    color: black;
     text-decoration: none;
     transition: .3s all ease;
     font-size: 18px;
@@ -61,13 +61,16 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 100px;
     font-size: 30px;
+    text-align: right;
+    color: #080808;
+    padding-right: 1%;
 }
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #f30707;
+    color: palevioletred;
 }
 /* --------------about---------- */
 
